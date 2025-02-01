@@ -1,0 +1,242 @@
+@import "./config.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  font-family: $fontThree;
+
+  header {
+    width: 100%;
+    height: 85px;
+    background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+
+    .contHeader {
+      width: 100%;
+      max-width: 75%;
+      margin: 0 auto;
+      @extend %flexBetween;
+
+      .navHeader {
+        @extend %flexCenter;
+        gap: 40px;
+        @media (max-width: 1080px) {
+          display: none;
+        }
+        .btnHeader {
+          opacity: 0.5;
+          cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: $txtWhite;
+          }
+
+          &:hover {
+            transition: 0.5s ease;
+            opacity: 1;
+          }
+        }
+
+        .active {
+          opacity: 1;
+        }
+      }
+
+      .socialMedia {
+        @extend %socialMedia;
+      }
+      .hamburgerMenu {
+        @extend %flexCenterColumn;
+        display: none;
+        gap: 7px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        .menuLines {
+          background-color: $txtWhite;
+          width: 22px;
+          height: 2px;
+        }
+        @media (max-width: 1080px) {
+          display: flex;
+        }
+      }
+      .logIn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $txtWhite;
+        cursor: pointer;
+
+        @media (max-width: 1080px) {
+          display: none;
+        }
+      }
+    }
+  }
+  main {
+    @extend %maxWidth940, %wh;
+    color: $txtWhite;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: $fontFour;
+    @media (max-width:430px) {
+      padding: 0px 5px;
+    }
+    .contactMainHeaderSection {
+      @extend %wh, %flexCenterColumn;
+      font-size: 50px;
+      color: $txtWhite;
+      margin: 150px 0px;
+      gap: 15px;
+      font-family: $fontThree;
+      .downTriangle {
+        cursor: pointer;
+        rotate: 180deg;
+      }
+    }
+    .dropLine {
+      max-width: 440px;
+      margin: 0 auto;
+      background-image: url(https://static.wixstatic.com/media/05e3dc_3b58c7497ffd4ec5aa839acb82db77a4.png/v1/fill/w_101,h_199,al_c,q_65,usm_0.66_1.00_0.01,enc_auto/05e3dc_3b58c7497ffd4ec5aa839acb82db77a4.png);
+      background-repeat: no-repeat;
+      background-position: 100% 100%;
+      h3 {
+        text-align: center;
+        font-size: 23px;
+        margin-bottom: 25px;
+      }
+      .form {
+        .fillForm {
+          @extend %wh;
+          flex-direction: column;
+          display: flex;
+          input[type="email"]:valid {
+            @extend %emailInput, %maxWidth480, %wh;
+            border: 1px transparent solid;
+          }
+          input[type="email"]:valid + .inpitTips {
+            display: none;
+          }
+          input[type="email"]:invalid {
+            @extend %emailInput, %maxWidth480, %wh;
+            border: 1px $txtWhite solid;
+          }
+          input[type="email"]:focus:invalid {
+            border: 1px $txtRed solid;
+          }
+          input[type="email"]:focus:invalid + .inputTips {
+            display: flex;
+          }
+          .inputTips {
+            font-size: 14px;
+            display: none;
+            align-items: center;
+            margin-top: 10px;
+            color: $txtRed;
+            gap: 10px;
+            margin-bottom: 5px;
+          }
+          label {
+            margin-bottom: 5px;
+          }
+          input {
+            margin-bottom: 15px;
+            background-color: $bgBlack;
+            border: 1px solid $txtWhite;
+            outline: none;
+            height: 42px;
+            max-width: 436px;
+            padding: 0px 10px;
+            color: $txtWhite;
+          }
+          input:invalid:focus {
+            border: 1px solid $txtRed;
+          }
+          textarea:invalid:focus {
+            border: 1px solid $txtRed;
+          }
+          textarea {
+            resize: none;
+            height: 100px;
+            margin-bottom: 15px;
+            background-color: $bgBlack;
+            border: 1px solid $txtWhite;
+            outline: none;
+            max-width: 436px;
+            padding: 3px 10px;
+            color: $txtWhite;
+          }
+          input[type="submit"] {
+            align-self: end;
+            margin-right: 5px;
+            font-size: 17px;
+            cursor: pointer;
+            color: $txtBlack;
+            background-color: $txtWhite;
+            padding: 11px 15px;
+            max-width: 130px;
+            position: relative;
+            right: 0px;
+            outline: none;
+            border: none;
+            transition: 0.6s linear;
+            &:hover {
+              background-color: $btnSubmitClr;
+            }
+          }
+        }
+      }
+    }
+    .contactInfo {
+      @extend %flexCenterColumn;
+      margin-top: 100px;
+      gap: 100px;
+      .manage,
+      .booking {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        h3 {
+          font-size: 23px;
+        }
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  footer {
+    @extend %flexCenterColumn;
+    gap: 40px;
+    margin: 25px 0px 15px 0px;
+    color: $txtWhite;
+    overflow: hidden;
+    @media (max-width:430px) {
+      padding: 0px 20px;
+    }
+    .upTriangle {
+      cursor: pointer;
+    }
+    .footerSocialMedia {
+      @extend %flexCenterColumn;
+      gap: 10px;
+
+      .socialMedia {
+        @extend %socialMedia;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Museo Slab 500";
+  src: url("../fonts/fontOne/MuseoSlab-500.eot");
+  src: url("../fonts/fontOne/MuseoSlab-500.eot?#iefix") format("embedded-opentype"), url("../fonts/fontOne/MuseoSlab-500.woff2") format("woff2"), url("../fonts/fontOne/MuseoSlab-500.woff") format("woff"), url("../fonts/fontOne/MuseoSlab-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Niconne";
+  src: url("../fonts/fontTwo/Niconne-Regular.eot");
+  src: url("../fonts/fontTwo/Niconne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/fontTwo/Niconne-Regular.woff2") format("woff2"), url("../fonts/fontTwo/Niconne-Regular.woff") format("woff"), url("../fonts/fontTwo/Niconne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot");
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot?#iefix") format("embedded-opentype"), url("../fonts/fontThree/NimbusSanL-Reg.woff2") format("woff2"), url("../fonts/fontThree/NimbusSanL-Reg.woff") format("woff"), url("../fonts/fontThree/NimbusSanL-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/fontFour/Raleway-Thin.woff2") format("woff2"), url("Raleway-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@keyframes logoChange {
+  0% {
+    opacity: 0.3;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=config.css.map */

@@ -1,0 +1,639 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Museo Slab 500";
+  src: url("../fonts/fontOne/MuseoSlab-500.eot");
+  src: url("../fonts/fontOne/MuseoSlab-500.eot?#iefix") format("embedded-opentype"), url("../fonts/fontOne/MuseoSlab-500.woff2") format("woff2"), url("../fonts/fontOne/MuseoSlab-500.woff") format("woff"), url("../fonts/fontOne/MuseoSlab-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Niconne";
+  src: url("../fonts/fontTwo/Niconne-Regular.eot");
+  src: url("../fonts/fontTwo/Niconne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/fontTwo/Niconne-Regular.woff2") format("woff2"), url("../fonts/fontTwo/Niconne-Regular.woff") format("woff"), url("../fonts/fontTwo/Niconne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot");
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot?#iefix") format("embedded-opentype"), url("../fonts/fontThree/NimbusSanL-Reg.woff2") format("woff2"), url("../fonts/fontThree/NimbusSanL-Reg.woff") format("woff"), url("../fonts/fontThree/NimbusSanL-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/fontFour/Raleway-Thin.woff2") format("woff2"), url("Raleway-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@keyframes logoChange {
+  0% {
+    opacity: 0.3;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailCheck .checkDiv input[type=checkbox], body main .musicSection .musicSectionBottom, body main .musicSection .albumPlayer .player .playerControls, body main .musicSection .albumPlayer .player .playerTop, body main .musicSection .musicSectionTop, body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsRight, body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsLeft .postView,
+body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsLeft .postComment, body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsLeft, body main .welcomeSection .btnTickets, body header .contHeader .navHeader, body main .musicSection .albumPlayer .playList .music .numberName,
+body main .musicSection .albumPlayer .playList .music .musicLength, body footer .footerSocialMedia .socialMedia, body header .contHeader .socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body footer .footerSocialMedia, body footer, body main .subscribeSection .subscribeSectionHeader, body main .musicSection .albumPlayer .playList, body main .musicSection .albumPlayer .player, body main .musicSection .albumPlayer .playerHeader, body main .musicSection, body main .blogSection .blogSectionHeader, body main .welcomeSection .theToxicVoid, body header .contHeader .hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main .musicSection .albumPlayer .playList .music, body main .musicSection .album .albumHeader, body main .blogSection .blogPosts .post .postInfo .postFooter .postStats, body header .contHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body main .blogSection .blogPosts .post .postInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+body footer .footerSocialMedia .socialMedia, body header .contHeader .socialMedia {
+  gap: 10px;
+}
+body footer .footerSocialMedia .socialMedia img, body header .contHeader .socialMedia img {
+  width: 24px;
+}
+body footer .footerSocialMedia .socialMedia .btnSocial, body header .contHeader .socialMedia .btnSocial {
+  cursor: pointer;
+}
+
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:invalid, body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:valid, body main .subscribeSection .subscribeEmail form .subscribeEmailInput, body main .subscribeSection .subscribeEmail, body main .subscribeSection .subscribeSectionHeader, body main .subscribeSection, body main .musicSection .musicSectionBottom, body main .musicSection .albumPlayer .playList, body main .musicSection .albumPlayer .player .playerTop, body main .musicSection .albumPlayer .player, body main .musicSection .albumPlayer, body main .musicSection .album .albumCover img, body main .musicSection .musicSectionTop, body main .welcomeSection .theToxicVoid img {
+  width: 100%;
+  height: 100%;
+}
+
+body main .musicSection {
+  max-width: 940px;
+}
+
+body main .musicSection .albumPlayer .playList, body main .musicSection .albumPlayer .player .playerTop, body main .musicSection .albumPlayer .player, body main .musicSection .albumPlayer, body main .musicSection .album .albumCover img {
+  max-width: 900px;
+}
+
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:invalid, body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:valid, body main .subscribeSection .subscribeEmail form .subscribeEmailInput, body main .subscribeSection {
+  max-width: 480px;
+}
+
+body main .musicSection .musicSectionBottom, body main .musicSection .musicSectionTop {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+body main .musicSection .albumPlayer .playList .music .numberName,
+body main .musicSection .albumPlayer .playList .music .musicLength {
+  gap: 15px;
+}
+body main .musicSection .albumPlayer .playList .music .numberName .time,
+body main .musicSection .albumPlayer .playList .music .musicLength .time {
+  padding: 8px 12px;
+}
+body main .musicSection .albumPlayer .playList .music .numberName .fa-share-nodes,
+body main .musicSection .albumPlayer .playList .music .musicLength .fa-share-nodes {
+  color: #605e5e;
+}
+body main .musicSection .albumPlayer .playList .music .numberName i,
+body main .musicSection .albumPlayer .playList .music .musicLength i {
+  display: none;
+}
+body main .musicSection .albumPlayer .playList .music .numberName .priceTag,
+body main .musicSection .albumPlayer .playList .music .musicLength .priceTag {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  display: none;
+}
+body main .musicSection .albumPlayer .playList .music .numberName .priceTag span,
+body main .musicSection .albumPlayer .playList .music .musicLength .priceTag span {
+  opacity: 0.6;
+}
+body main .musicSection .albumPlayer .playList .music:hover .numberName i,
+body main .musicSection .albumPlayer .playList .music:hover .musicLength i {
+  display: block;
+}
+body main .musicSection .albumPlayer .playList .music:hover .numberName .time,
+body main .musicSection .albumPlayer .playList .music:hover .musicLength .time {
+  display: none;
+}
+body main .musicSection .albumPlayer .playList .music:hover .numberName .orderNumber,
+body main .musicSection .albumPlayer .playList .music:hover .musicLength .orderNumber {
+  display: none;
+}
+body main .musicSection .albumPlayer .playList .music:hover .numberName .priceTag,
+body main .musicSection .albumPlayer .playList .music:hover .musicLength .priceTag {
+  display: block;
+}
+
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:invalid, body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:valid {
+  background-color: rgba(47, 46, 46, 0.6588235294);
+  color: #ffffff;
+  outline: none;
+  padding: 0px 5px;
+  height: 40px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  font-family: "Nimbus Sans L";
+}
+body header {
+  width: 100%;
+  height: 85px;
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+body header .contHeader {
+  width: 100%;
+  max-width: 75%;
+  margin: 0 auto;
+}
+body header .contHeader .navHeader {
+  gap: 40px;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .navHeader {
+    display: none;
+  }
+}
+body header .contHeader .navHeader .btnHeader {
+  opacity: 0.5;
+  cursor: pointer;
+}
+body header .contHeader .navHeader .btnHeader a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body header .contHeader .navHeader .btnHeader:hover {
+  transition: 0.5s ease;
+  opacity: 1;
+}
+body header .contHeader .navHeader .active {
+  opacity: 1;
+}
+body header .contHeader .hamburgerMenu {
+  display: none;
+  gap: 7px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+body header .contHeader .hamburgerMenu .menuLines {
+  background-color: #ffffff;
+  width: 22px;
+  height: 2px;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .hamburgerMenu {
+    display: flex;
+  }
+}
+body header .contHeader .logIn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .logIn {
+    display: none;
+  }
+}
+body main {
+  overflow: hidden;
+}
+body main .welcomeSection {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://static.wixstatic.com/media/84770f_38f03f480e824db487b4403a6937c874.png/v1/fill/w_1519,h_749,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/84770f_38f03f480e824db487b4403a6937c874.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+body main .welcomeSection .theToxicVoid {
+  margin-top: 100px;
+  gap: 20px;
+  color: #ffffff;
+}
+@media (max-width: 430px) {
+  body main .welcomeSection .theToxicVoid {
+    padding: 0px 5px;
+  }
+}
+body main .welcomeSection .theToxicVoid p {
+  font-family: "Niconne";
+  font-size: 36px;
+}
+body main .welcomeSection .theToxicVoid h3 {
+  font-size: 60px;
+}
+body main .welcomeSection .theToxicVoid img {
+  max-width: 529px;
+  max-height: 298px;
+  position: relative;
+}
+@media (max-width: 1080px) {
+  body main .welcomeSection .theToxicVoid img {
+    animation: logoChange 2s 1 linear 0.2s;
+  }
+}
+body main .welcomeSection .btnTickets {
+  border: 2px #ffffff solid;
+  width: 218px;
+  height: 56px;
+  cursor: pointer;
+}
+body main .welcomeSection .btnTickets a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body main .welcomeSection .btnTickets:hover {
+  transition: 0.5s ease;
+  background-color: #ffffff;
+}
+body main .welcomeSection .btnTickets:hover a {
+  color: #000000;
+}
+body main .blogSection {
+  margin: 0 auto;
+  max-width: 980px;
+  margin-top: 25px;
+  max-height: 100%;
+}
+@media (max-width: 430px) {
+  body main .blogSection {
+    padding: 0px 5px;
+  }
+}
+body main .blogSection .blogSectionHeader {
+  gap: 25px;
+  margin-bottom: 150px;
+}
+body main .blogSection .blogSectionHeader h3 {
+  font-size: 50px;
+  color: #ffffff;
+}
+body main .blogSection .blogPosts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+}
+@media (max-width: 1080px) {
+  body main .blogSection .blogPosts {
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+body main .blogSection .blogPosts .post {
+  position: relative;
+  max-width: 490px;
+  max-height: 490px;
+}
+body main .blogSection .blogPosts .post .postInfo {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  color: #ffffff;
+}
+body main .blogSection .blogPosts .post .postInfo:hover .postTitle {
+  color: #def599;
+}
+body main .blogSection .blogPosts .post .postInfo .postHeader {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body main .blogSection .blogPosts .post .postInfo .postHeader .userName span {
+  cursor: pointer;
+}
+body main .blogSection .blogPosts .post .postInfo .postHeader .userName span:hover {
+  color: #def599;
+}
+body main .blogSection .blogPosts .post .postInfo .postFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body main .blogSection .blogPosts .post .postInfo .postFooter .postTitle {
+  font-size: 28px;
+  cursor: pointer;
+}
+body main .blogSection .blogPosts .post .postInfo .postFooter .postTitle:hover {
+  color: #def599;
+}
+body main .blogSection .blogPosts .post .postInfo .postFooter .postStats {
+  font-size: 12px;
+}
+body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsLeft {
+  gap: 15px;
+}
+body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsLeft .postView,
+body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsLeft .postComment {
+  gap: 10px;
+}
+body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsLeft .postView .far,
+body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsLeft .postComment .far {
+  cursor: pointer;
+}
+body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsRight {
+  gap: 10px;
+}
+body main .blogSection .blogPosts .post .postInfo .postFooter .postStats .postStatsRight .far {
+  cursor: pointer;
+}
+body main .blogSection .blogPosts .post .postPicture img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+body main .musicSection {
+  font-family: "Raleway";
+  margin: 0 auto;
+  width: 100%;
+}
+@media (max-width: 430px) {
+  body main .musicSection {
+    padding: 0px 5px;
+  }
+}
+body main .musicSection .musicSectionTop {
+  position: relative;
+}
+body main .musicSection .musicSectionTop .upTriangle {
+  cursor: pointer;
+  position: absolute;
+  top: -47px;
+}
+body main .musicSection .musicSectionHeader {
+  margin-bottom: 100px;
+  font-size: 23px;
+  color: #ffffff;
+}
+@media (max-width: 1080px) {
+  body main .musicSection .musicSectionHeader {
+    animation: logoChange 2s 1 linear 0.2s;
+  }
+}
+body main .musicSection .album .albumHeader {
+  padding: 5px 10px;
+}
+body main .musicSection .album .albumHeader .albumPrice span,
+body main .musicSection .album .albumHeader .albumShare span {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0.7;
+  cursor: pointer;
+}
+body main .musicSection .album .albumHeader .albumPrice span:hover,
+body main .musicSection .album .albumHeader .albumShare span:hover {
+  opacity: 1;
+}
+body main .musicSection .album .albumCover img {
+  max-height: 330px;
+}
+body main .musicSection .albumPlayer {
+  color: #ffffff;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+body main .musicSection .albumPlayer .playerHeader {
+  gap: 15px;
+  color: #ffffff;
+}
+body main .musicSection .albumPlayer .player .playerTop {
+  font-size: 12px;
+  margin-top: 25px;
+  gap: 10px;
+}
+body main .musicSection .albumPlayer .player .playerTop .timeLine {
+  height: 5px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  position: relative;
+}
+body main .musicSection .albumPlayer .player .playerTop .timeLine .passedTimeLine {
+  border-radius: 25px;
+  background-color: #ffffff;
+  height: 5px;
+  width: 35%;
+  position: absolute;
+}
+body main .musicSection .albumPlayer .player .playerControls {
+  fill: #ffffff;
+  margin-top: 25px;
+  gap: 15px;
+}
+body main .musicSection .albumPlayer .player .playerControls .mediaBtnList,
+body main .musicSection .albumPlayer .player .playerControls .mediaBtnPrev,
+body main .musicSection .albumPlayer .player .playerControls .mediaBtnPlayPause,
+body main .musicSection .albumPlayer .player .playerControls .mediaBtnNext,
+body main .musicSection .albumPlayer .player .playerControls .mediaBtnShare {
+  display: none;
+}
+@media (max-width: 430px) {
+  body main .musicSection .albumPlayer .player .playerControls .btnVolume,
+  body main .musicSection .albumPlayer .player .playerControls .btnPrev,
+  body main .musicSection .albumPlayer .player .playerControls .btnPlayPause,
+  body main .musicSection .albumPlayer .player .playerControls .btnNext,
+  body main .musicSection .albumPlayer .player .playerControls .btnMusicInfo {
+    display: none;
+  }
+  body main .musicSection .albumPlayer .player .playerControls .mediaBtnList,
+  body main .musicSection .albumPlayer .player .playerControls .mediaBtnPrev,
+  body main .musicSection .albumPlayer .player .playerControls .mediaBtnPlayPause,
+  body main .musicSection .albumPlayer .player .playerControls .mediaBtnNext,
+  body main .musicSection .albumPlayer .player .playerControls .mediaBtnShare {
+    display: block;
+  }
+}
+body main .musicSection .albumPlayer .player .playerControls * {
+  opacity: 0.9;
+  cursor: pointer;
+}
+body main .musicSection .albumPlayer .player .playerControls *:hover {
+  opacity: 1;
+}
+body main .musicSection .albumPlayer .playList {
+  margin-top: 25px;
+}
+body main .musicSection .albumPlayer .playList .music {
+  width: inherit;
+  cursor: pointer;
+  padding: 15px 0px;
+  border-top: 2px solid #605e5e;
+}
+body main .musicSection .musicSectionBottom {
+  position: relative;
+}
+body main .musicSection .musicSectionBottom .downTriangle {
+  cursor: pointer;
+  position: absolute;
+  top: -27px;
+  rotate: 180deg;
+}
+body main .subscribeSection {
+  color: #ffffff;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  font-family: "Raleway";
+}
+@media (max-width: 430px) {
+  body main .subscribeSection {
+    padding: 0px 5px;
+  }
+}
+body main .subscribeSection .subscribeSectionHeader {
+  font-size: 17px;
+  gap: 10px;
+}
+body main .subscribeSection .subscribeEmail {
+  margin-top: 25px;
+}
+body main .subscribeSection .subscribeEmail form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body main .subscribeSection .subscribeEmail form label {
+  font-size: 15px;
+  cursor: pointer;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:valid {
+  border: 1px transparent solid;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:valid + .inpitTips {
+  display: none;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:invalid {
+  border: 1px #ffffff solid;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput .inputTips {
+  font-size: 14px;
+  display: none;
+  align-items: center;
+  margin-top: 10px;
+  color: #dc143c;
+  gap: 10px;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:focus:invalid {
+  border: 1px #dc143c solid;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailInput input[type=email]:focus:invalid + .inputTips {
+  display: flex;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailCheck {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailCheck .checkDiv {
+  font-size: 14px;
+  height: 60px;
+  display: grid;
+  grid-template-columns: 20px 460px;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailCheck .checkDiv input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #ffffff;
+  color: white;
+  width: 16px;
+  height: 16px;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailCheck .checkDiv input[type=checkbox]:focus:not(:checked) {
+  border: 1px solid #dc143c;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailCheck .checkDiv input[type=checkbox]:checked::after {
+  content: "✔";
+  color: #ffffff;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailCheck .checkDiv input[type=checkbox]:focus:not(:checked) ~ .checkTips {
+  display: flex;
+}
+body main .subscribeSection .subscribeEmail form .subscribeEmailCheck .checkDiv .checkTips {
+  display: none;
+  position: relative;
+  gap: 10px;
+  color: #dc143c;
+}
+body main .subscribeSection .subscribeEmail form button input[type=submit] {
+  padding: 11px 15px;
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body main .subscribeSection .subscribeEmail form button:hover {
+  opacity: 0.8;
+}
+body footer {
+  gap: 40px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  color: #ffffff;
+  overflow: hidden;
+}
+@media (max-width: 430px) {
+  body footer {
+    padding: 0px 20px;
+  }
+}
+body footer .footerSocialMedia {
+  gap: 10px;
+}/*# sourceMappingURL=styles.css.map */

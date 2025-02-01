@@ -1,0 +1,537 @@
+@font-face {
+  font-family: "Museo Slab 500";
+  src: url("../fonts/fontOne/MuseoSlab-500.eot");
+  src: url("../fonts/fontOne/MuseoSlab-500.eot?#iefix") format("embedded-opentype"), url("../fonts/fontOne/MuseoSlab-500.woff2") format("woff2"), url("../fonts/fontOne/MuseoSlab-500.woff") format("woff"), url("../fonts/fontOne/MuseoSlab-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Niconne";
+  src: url("../fonts/fontTwo/Niconne-Regular.eot");
+  src: url("../fonts/fontTwo/Niconne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/fontTwo/Niconne-Regular.woff2") format("woff2"), url("../fonts/fontTwo/Niconne-Regular.woff") format("woff"), url("../fonts/fontTwo/Niconne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot");
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot?#iefix") format("embedded-opentype"), url("../fonts/fontThree/NimbusSanL-Reg.woff2") format("woff2"), url("../fonts/fontThree/NimbusSanL-Reg.woff") format("woff"), url("../fonts/fontThree/NimbusSanL-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/fontFour/Raleway-Thin.woff2") format("woff2"), url("Raleway-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@keyframes logoChange {
+  0% {
+    opacity: 0.3;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body main .musicSectionBottom, body main .musicSectionTop, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerTop, body header .contHeader .navHeader, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .numberName,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .musicLength, body footer .footerSocialMedia .socialMedia, body header .contHeader .socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body footer .footerSocialMedia, body footer, body main .gallerySection .gallery .galleryPicture .picture .pictureInfo .galleryPictureTitle, body main .gallerySection, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playerHeader, body main .mediaMainHeader, body header .contHeader .hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main .videoSection .videos, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music, body main .mediaMusicSection .mediaMusicSectionRight .album .albumHeader, body header .contHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+body footer .footerSocialMedia .socialMedia, body header .contHeader .socialMedia {
+  gap: 10px;
+}
+body footer .footerSocialMedia .socialMedia img, body header .contHeader .socialMedia img {
+  width: 24px;
+}
+body footer .footerSocialMedia .socialMedia .btnSocial, body header .contHeader .socialMedia .btnSocial {
+  cursor: pointer;
+}
+
+body main .musicSectionBottom, body main .musicSectionTop, body main .mediaMusicSection .mediaMusicSectionRight .album .albumCover img, body main .mediaMusicSection, body main .mediaMainHeader {
+  width: 100%;
+  height: 100%;
+}
+
+body main .videoSection, body main .mediaMusicSection {
+  max-width: 940px;
+}
+
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerTop, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player, body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer, body main .mediaMusicSection .mediaMusicSectionRight .album .albumCover img {
+  max-width: 900px;
+}
+
+body main .musicSectionBottom, body main .musicSectionTop {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .numberName,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .musicLength {
+  gap: 15px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .numberName .time,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .musicLength .time {
+  padding: 8px 12px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .numberName .fa-share-nodes,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .musicLength .fa-share-nodes {
+  color: #605e5e;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .numberName i,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .musicLength i {
+  display: none;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .numberName .priceTag,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .musicLength .priceTag {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  display: none;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .numberName .priceTag span,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music .musicLength .priceTag span {
+  opacity: 0.6;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music:hover .numberName i,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music:hover .musicLength i {
+  display: block;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music:hover .numberName .time,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music:hover .musicLength .time {
+  display: none;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music:hover .numberName .orderNumber,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music:hover .musicLength .orderNumber {
+  display: none;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music:hover .numberName .priceTag,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music:hover .musicLength .priceTag {
+  display: block;
+}
+
+body main .gallerySection .gallery .galleryPicture .fa-angle-right, body main .gallerySection .gallery .galleryPicture .fa-angle-left {
+  position: absolute;
+  cursor: pointer;
+  font-size: 40px;
+  top: 50%;
+  opacity: 0.6;
+  z-index: 99;
+}
+body main .gallerySection .gallery .galleryPicture .fa-angle-right:hover, body main .gallerySection .gallery .galleryPicture .fa-angle-left:hover {
+  opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  font-family: "Nimbus Sans L";
+}
+body header {
+  width: 100%;
+  height: 85px;
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+body header .contHeader {
+  width: 100%;
+  max-width: 75%;
+  margin: 0 auto;
+}
+body header .contHeader .navHeader {
+  gap: 40px;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .navHeader {
+    display: none;
+  }
+}
+body header .contHeader .navHeader .btnHeader {
+  opacity: 0.5;
+  cursor: pointer;
+}
+body header .contHeader .navHeader .btnHeader a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body header .contHeader .navHeader .btnHeader:hover {
+  transition: 0.5s ease;
+  opacity: 1;
+}
+body header .contHeader .navHeader .active {
+  opacity: 1;
+}
+body header .contHeader .hamburgerMenu {
+  display: none;
+  gap: 7px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+body header .contHeader .hamburgerMenu .menuLines {
+  background-color: #ffffff;
+  width: 22px;
+  height: 2px;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .hamburgerMenu {
+    display: flex;
+  }
+}
+body header .contHeader .logIn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .logIn {
+    display: none;
+  }
+}
+body main {
+  color: #ffffff;
+  overflow: hidden;
+  font-family: "Raleway";
+}
+body main .mediaMainHeader {
+  font-family: "Nimbus Sans L";
+  font-size: 50px;
+  color: #ffffff;
+  margin: 150px 0px;
+  gap: 15px;
+}
+@media (max-width: 430px) {
+  body main .mediaMainHeader img[alt="small line"] {
+    display: none;
+  }
+  body main .mediaMainHeader .downTriangle {
+    animation: logoChange 2s 1 linear 0.2s;
+  }
+}
+body main .mediaMainHeader .downTriangle {
+  cursor: pointer;
+  rotate: 180deg;
+}
+body main .mediaMusicSection {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1080px) {
+  body main .mediaMusicSection {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 430px) {
+  body main .mediaMusicSection {
+    padding: 0px 5px;
+  }
+}
+body main .mediaMusicSection .mediaMusicSectionLeft {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  gap: 50px;
+}
+body main .mediaMusicSection .mediaMusicSectionLeft .newAlbumHeader {
+  margin-top: 5px;
+  font-size: 23px;
+}
+body main .mediaMusicSection .mediaMusicSectionLeft .newAlbumHeader h3 {
+  font-size: 37px;
+  margin-top: 5px;
+}
+@media (max-width: 430px) {
+  body main .mediaMusicSection .mediaMusicSectionLeft .newAlbumHeader h3 {
+    animation: logoChange 2s 1 linear 0.2s;
+  }
+}
+body main .mediaMusicSection .mediaMusicSectionLeft .newAlbumInfo {
+  font-family: "Raleway";
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight {
+  max-width: 440px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .album .albumHeader {
+  padding: 5px 10px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .album .albumHeader .albumPrice span,
+body main .mediaMusicSection .mediaMusicSectionRight .album .albumHeader .albumShare span {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0.7;
+  cursor: pointer;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .album .albumHeader .albumPrice span:hover,
+body main .mediaMusicSection .mediaMusicSectionRight .album .albumHeader .albumShare span:hover {
+  opacity: 1;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .album .albumCover img {
+  max-height: 330px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer {
+  color: #ffffff;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playerHeader {
+  color: #ffffff;
+  gap: 15px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerTop {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 25px;
+  gap: 10px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerTop .timeLine {
+  height: 5px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  position: relative;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerTop .timeLine .passedTimeLine {
+  border-radius: 25px;
+  background-color: #ffffff;
+  height: 5px;
+  width: 35%;
+  position: absolute;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls {
+  fill: #ffffff;
+  margin-top: 25px;
+  gap: 15px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnList,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnPrev,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnPlayPause,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnNext,
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnShare {
+  display: none;
+}
+@media (max-width: 430px) {
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .btnVolume,
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .btnPrev,
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .btnPlayPause,
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .btnNext,
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .btnMusicInfo {
+    display: none;
+  }
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnList,
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnPrev,
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnPlayPause,
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnNext,
+  body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnShare {
+    display: block;
+  }
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls * {
+  opacity: 0.9;
+  cursor: pointer;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .player .playerControls *:hover {
+  opacity: 1;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList {
+  width: 100%;
+  margin-top: 25px;
+}
+body main .mediaMusicSection .mediaMusicSectionRight .albumPlayer .playList .music {
+  width: inherit;
+  cursor: pointer;
+  padding: 15px 0px;
+  border-top: 2px solid #605e5e;
+}
+body main .musicSectionTop {
+  position: relative;
+}
+@media (max-width: 430px) {
+  body main .musicSectionTop .bigLine {
+    display: none;
+  }
+}
+body main .musicSectionTop .upTriangle {
+  cursor: pointer;
+  position: absolute;
+  top: -47px;
+}
+body main .videoSection {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+body main .videoSection .lateMusic {
+  text-align: center;
+}
+body main .videoSection .videos {
+  gap: 40px;
+  margin: 0 auto;
+}
+@media (max-width: 1080px) {
+  body main .videoSection .videos {
+    flex-direction: column;
+  }
+}
+@media (max-width: 430px) {
+  body main .videoSection .videos iframe {
+    max-width: 430px;
+    width: 100%;
+  }
+}
+body main .musicSectionBottom {
+  position: relative;
+}
+@media (max-width: 430px) {
+  body main .musicSectionBottom .bigLine {
+    display: none;
+  }
+}
+body main .musicSectionBottom .downTriangle {
+  cursor: pointer;
+  position: absolute;
+  top: -27px;
+  rotate: 180deg;
+}
+body main .gallerySection {
+  gap: 25px;
+}
+@media (max-width: 430px) {
+  body main .gallerySection {
+    padding: 0px 5px;
+  }
+}
+body main .gallerySection span {
+  font-size: 23px;
+}
+body main .gallerySection .gallery {
+  max-width: 900px;
+  width: 100%;
+}
+body main .gallerySection .gallery .galleryPicture {
+  position: relative;
+}
+body main .gallerySection .gallery .galleryPicture .fa-angle-left {
+  left: 15px;
+}
+body main .gallerySection .gallery .galleryPicture .fa-angle-right {
+  right: 15px;
+}
+body main .gallerySection .gallery .galleryPicture .picture {
+  width: 100%;
+  transition: filter 0.8s linear;
+  position: relative;
+}
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo {
+  position: absolute;
+  top: 15%;
+  height: 80%;
+  max-width: 900px;
+  width: 100%;
+  opacity: 0;
+}
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo:hover {
+  opacity: 1;
+}
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo .galleryPictureTitle {
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo .galleryPictureTitle h3 {
+  margin-bottom: 25px;
+}
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo .galleryPictureTitle span {
+  font-size: 15px;
+  max-width: 600px;
+}
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo .pictureInfoLS {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo .pictureInfoLS .heartL,
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo .pictureInfoLS .shareS {
+  cursor: pointer;
+  opacity: 0.7;
+}
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo .pictureInfoLS .heartL:hover,
+body main .gallerySection .gallery .galleryPicture .picture .pictureInfo .pictureInfoLS .shareS:hover {
+  opacity: 1;
+}
+body main .gallerySection .gallery .galleryPicture .picture img[alt=guitar] {
+  opacity: 0.8;
+  width: 100%;
+  max-width: 892px;
+  height: 100%;
+}
+body main .gallerySection .gallery .galleryPicture .picture:hover {
+  filter: grayscale(100%);
+}
+body footer {
+  font-family: "Raleway";
+  gap: 40px;
+  margin: 25px 0px 15px 0px;
+  color: #ffffff;
+  overflow: hidden;
+}
+@media (max-width: 430px) {
+  body footer {
+    padding: 0px 20px;
+  }
+}
+body footer .upTriangle {
+  cursor: pointer;
+}
+@media (max-width: 430px) {
+  body footer .upTriangle img[alt="up Triangle"] {
+    animation: logoChange 2s 1 linear 0.2s;
+  }
+}
+body footer .footerSocialMedia {
+  gap: 10px;
+}/*# sourceMappingURL=styles-media.css.map */

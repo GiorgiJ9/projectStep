@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Nimbus Sans L';
+    src: url('NimbusSanL-Reg.eot');
+    src: url('NimbusSanL-Reg.eot?#iefix') format('embedded-opentype'),
+        url('NimbusSanL-Reg.woff2') format('woff2'),
+        url('NimbusSanL-Reg.woff') format('woff'),
+        url('NimbusSanL-Reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,563 @@
+@import "./config.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  font-family: $fontThree;
+
+  header {
+    width: 100%;
+    height: 85px;
+    background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+
+    .contHeader {
+      width: 100%;
+      max-width: 75%;
+      margin: 0 auto;
+      @extend %flexBetween;
+
+      .navHeader {
+        @extend %flexCenter;
+        gap: 40px;
+        @media (max-width: 1080px) {
+          display: none;
+        }
+        .btnHeader {
+          opacity: 0.5;
+          cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: $txtWhite;
+          }
+
+          &:hover {
+            transition: 0.5s ease;
+            opacity: 1;
+          }
+        }
+
+        .active {
+          opacity: 1;
+        }
+      }
+
+      .socialMedia {
+        @extend %socialMedia;
+      }
+      .hamburgerMenu {
+        @extend %flexCenterColumn;
+        display: none;
+        gap: 7px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        .menuLines {
+          background-color: $txtWhite;
+          width: 22px;
+          height: 2px;
+        }
+        @media (max-width: 1080px) {
+          display: flex;
+        }
+      }
+      .logIn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $txtWhite;
+        cursor: pointer;
+
+        @media (max-width: 1080px) {
+          display: none;
+        }
+      }
+    }
+  }
+  main {
+    overflow: hidden;
+    .welcomeSection {
+      width: 100%;
+      height: 100vh;
+      background-image: url(https://static.wixstatic.com/media/84770f_38f03f480e824db487b4403a6937c874.png/v1/fill/w_1519,h_749,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/84770f_38f03f480e824db487b4403a6937c874.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+
+      .theToxicVoid {
+        @extend %flexCenterColumn;
+        margin-top: 100px;
+        gap: 20px;
+        color: $txtWhite;
+        @media (max-width:430px) {
+          padding: 0px 5px;
+        }
+        p {
+          font-family: $fontTwo;
+          font-size: 36px;
+        }
+        h3 {
+          font-size: 60px;
+        }
+        img {
+          @extend %wh;
+          max-width: 529px;
+          max-height: 298px;
+          position: relative;
+          @media (max-width: 1080px) {
+            animation: logoChange 2s 1 linear 0.2s;
+          }
+        }
+      }
+
+      .btnTickets {
+        @extend %flexCenter;
+        border: 2px $txtWhite solid;
+        width: 218px;
+        height: 56px;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: $txtWhite;
+        }
+
+        &:hover {
+          transition: 0.5s ease;
+          background-color: $txtWhite;
+
+          a {
+            color: $txtBlack;
+          }
+        }
+      }
+    }
+    .blogSection {
+      margin: 0 auto;
+      max-width: 980px;
+      margin-top: 25px;
+      max-height: 100%;
+      @media (max-width:430px) {
+        padding: 0px 5px;
+      }
+      .blogSectionHeader {
+        @extend %flexCenterColumn;
+        gap: 25px;
+        margin-bottom: 150px;
+
+        h3 {
+          font-size: 50px;
+          color: $txtWhite;
+        }
+      }
+
+      .blogPosts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        height: 100%;
+        gap: 30px;
+        @media (max-width: 1080px) {
+          justify-content: center;
+          grid-template-columns: auto;
+          grid-template-rows: repeat(4, 1fr);
+        }
+        .post {
+          position: relative;
+          max-width: 490px;
+          max-height: 490px;
+          .postInfo {
+            padding: 30px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 5;
+            color: $txtWhite;
+            @extend %flexBetweenColumn1;
+
+            &:hover {
+              .postTitle {
+                color: $txtHoverTwo;
+              }
+            }
+
+            .postHeader {
+              width: 100%;
+              font-size: 12px;
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              .userName {
+                span {
+                  cursor: pointer;
+
+                  &:hover {
+                    color: $txtHoverTwo;
+                  }
+                }
+              }
+            }
+
+            .postFooter {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+
+              .postTitle {
+                font-size: 28px;
+                cursor: pointer;
+                &:hover {
+                  color: $txtHoverTwo;
+                }
+              }
+
+              .postStats {
+                font-size: 12px;
+                @extend %flexBetween;
+
+                .postStatsLeft {
+                  @extend %flexCenter;
+                  gap: 15px;
+
+                  .postView,
+                  .postComment {
+                    @extend %flexCenter;
+                    gap: 10px;
+
+                    .far {
+                      cursor: pointer;
+                    }
+                  }
+                }
+
+                .postStatsRight {
+                  @extend %flexCenter;
+                  gap: 10px;
+
+                  .far {
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+
+          .postPicture {
+            img {
+              width: 100%;
+              height: 100%;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+    .musicSection {
+      font-family: $fontFour;
+      margin: 0 auto;
+      width: 100%;
+      @media (max-width:430px) {
+        padding: 0px 5px;
+      }
+      @extend %flexCenterColumn, %maxWidth940;
+
+      .musicSectionTop {
+        @extend %flexCenter, %wh, %margingTB100;
+        position: relative;
+
+        .upTriangle {
+          cursor: pointer;
+          position: absolute;
+          top: -47px;
+        }
+      }
+
+      .musicSectionHeader {
+        margin-bottom: 100px;
+        font-size: 23px;
+        color: $txtWhite;
+        @media (max-width: 1080px) {
+          animation: logoChange 2s 1 linear 0.2s;
+        }
+      }
+
+      .album {
+        .albumHeader {
+          @extend %flexBetween;
+          padding: 5px 10px;
+
+          .albumPrice,
+          .albumShare {
+            span {
+              color: $txtWhiteGray;
+              opacity: 0.7;
+              cursor: pointer;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        .albumCover {
+          img {
+            @extend %wh, %maxWidth900;
+            max-height: 330px;
+          }
+        }
+      }
+
+      .albumPlayer {
+        @extend %wh, %maxWidth900;
+        color: $txtWhite;
+        padding-top: 100px;
+        margin: 0 auto;
+
+        .playerHeader {
+          @extend %flexCenterColumn;
+          gap: 15px;
+          color: $txtWhite;
+        }
+
+        .player {
+          @extend %flexCenterColumn, %wh, %maxWidth900;
+
+          .playerTop {
+            font-size: 12px;
+            @extend %flexCenter, %wh, %maxWidth900;
+            margin-top: 25px;
+            gap: 10px;
+
+            .timeLine {
+              height: 5px;
+              width: 100%;
+              background-color: $bgPlayer;
+              border-radius: 25px;
+              position: relative;
+
+              .passedTimeLine {
+                border-radius: 25px;
+                background-color: $txtWhite;
+                height: 5px;
+                width: 35%;
+                position: absolute;
+              }
+            }
+          }
+
+          .playerControls {
+            @extend %flexCenter;
+            fill: $txtWhite;
+            margin-top: 25px;
+            gap: 15px;
+            .mediaBtnList,
+            .mediaBtnPrev,
+            .mediaBtnPlayPause,
+            .mediaBtnNext,
+            .mediaBtnShare{
+              display: none;
+            }
+            @media (max-width:430px) {
+              .btnVolume,
+              .btnPrev,
+              .btnPlayPause,
+              .btnNext,
+              .btnMusicInfo{
+                display: none;
+              }
+              .mediaBtnList,
+              .mediaBtnPrev,
+              .mediaBtnPlayPause,
+              .mediaBtnNext,
+              .mediaBtnShare{
+                display: block;
+              }
+            }
+            * {
+              opacity: 0.9;
+              cursor: pointer;
+              &:hover{
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        .playList {
+          @extend %flexCenterColumn, %wh, %maxWidth900;
+          margin-top: 25px;
+
+          .music {
+            @extend %flexBetween, %forPlayList;
+            width: inherit;
+            cursor: pointer;
+            padding: 15px 0px;
+            border-top: 2px solid $clrGray;
+          }
+        }
+      }
+
+      .musicSectionBottom {
+        @extend %flexCenter, %wh, %margingTB100;
+        position: relative;
+
+        .downTriangle {
+          cursor: pointer;
+          position: absolute;
+          top: -27px;
+          rotate: 180deg;
+        }
+      }
+    }
+    .subscribeSection {
+      @extend %maxWidth480, %wh;
+      color: $txtWhite;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      font-family: $fontFour;
+      @media (max-width:430px) {
+        padding: 0px 5px;
+      }
+      .subscribeSectionHeader {
+        font-size: 17px;
+        @extend %flexCenterColumn, %wh;
+        gap: 10px;
+      }
+      .subscribeEmail {
+        @extend %wh;
+        margin-top: 25px;
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          label {
+            font-size: 15px;
+            cursor: pointer;
+          }
+          .subscribeEmailInput {
+            @extend %maxWidth480, %wh;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            input[type="email"]:valid {
+              @extend %emailInput, %maxWidth480, %wh;
+              border: 1px transparent solid;
+            }
+            input[type="email"]:valid + .inpitTips {
+              display: none;
+            }
+            input[type="email"]:invalid {
+              @extend %emailInput, %maxWidth480, %wh;
+              border: 1px $txtWhite solid;
+            }
+            .inputTips {
+              font-size: 14px;
+              display: none;
+              align-items: center;
+              margin-top: 10px;
+              color: $txtRed;
+              gap: 10px;
+            }
+            input[type="email"]:focus:invalid {
+              border: 1px $txtRed solid;
+            }
+            input[type="email"]:focus:invalid + .inputTips {
+              display: flex;
+            }
+          }
+          .subscribeEmailCheck {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            gap: 10px;
+            .checkDiv {
+              font-size: 14px;
+              height: 60px;
+              display: grid;
+              grid-template-columns: 20px 460px;
+              grid-template-rows: repeat(2, 1fr);
+              align-items: center;
+              gap: 10px;
+              position: relative;
+              input[type="checkbox"] {
+                @extend %flexCenter;
+                appearance: none;
+                border: 1px solid $txtWhite;
+                color: white;
+                width: 16px;
+                height: 16px;
+              }
+              input[type="checkbox"]:focus:not(:checked) {
+                border: 1px solid $txtRed;
+              }
+              input[type="checkbox"]:checked::after {
+                content: "✔";
+                color: $txtWhite;
+              }
+              input[type="checkbox"]:focus:not(:checked) ~ .checkTips {
+                display: flex;
+              }
+              .checkTips {
+                display: none;
+                position: relative;
+                gap: 10px;
+                color: $txtRed;
+              }
+            }
+          }
+          button {
+            input[type="submit"] {
+              padding: 11px 15px;
+              font-size: 17px;
+              background: transparent;
+              border: none;
+              outline: none;
+              appearance: none;
+            }
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    @extend %flexCenterColumn;
+    gap: 40px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    color: $txtWhite;
+    overflow: hidden;
+    @media (max-width:430px) {
+      padding: 0px 20px;
+    }
+    .footerSocialMedia {
+      @extend %flexCenterColumn;
+      gap: 10px;
+
+      .socialMedia {
+        @extend %socialMedia;
+      }
+    }
+  }
+}

@@ -1,0 +1,266 @@
+@import "./config.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  font-family: $fontThree;
+
+  header {
+    width: 100%;
+    height: 85px;
+    background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+
+    .contHeader {
+      width: 100%;
+      max-width: 75%;
+      margin: 0 auto;
+      @extend %flexBetween;
+
+      .navHeader {
+        @extend %flexCenter;
+        gap: 40px;
+        @media (max-width: 1080px) {
+          display: none;
+        }
+        .btnHeader {
+          opacity: 0.5;
+          cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: $txtWhite;
+          }
+
+          &:hover {
+            transition: 0.5s ease;
+            opacity: 1;
+          }
+        }
+
+        .active {
+          opacity: 1;
+        }
+      }
+
+      .socialMedia {
+        @extend %socialMedia;
+      }
+      .hamburgerMenu {
+        @extend %flexCenterColumn;
+        display: none;
+        gap: 7px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        .menuLines {
+          background-color: $txtWhite;
+          width: 22px;
+          height: 2px;
+        }
+        @media (max-width: 1080px) {
+          display: flex;
+        }
+      }
+      .logIn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $txtWhite;
+        cursor: pointer;
+
+        @media (max-width: 1080px) {
+          display: none;
+        }
+      }
+    }
+  }
+  main {
+    @extend %wh, %flexCenterColumn;
+    overflow: hidden;
+    .tourMainHeader {
+      @extend %wh, %flexCenterColumn;
+      font-size: 50px;
+      color: $txtWhite;
+      margin: 150px 0px 50px 0px;
+      gap: 15px;
+      @media (max-width:430px) {
+        img[alt="small line"]{
+          display: none;
+        }
+        .downTriangle{
+          animation: logoChange 2s 1 linear 0.2s;
+        }
+      }
+      .downTriangle {
+        cursor: pointer;
+        rotate: 180deg;
+      }
+    }
+    .accordion {
+      @extend %wh;
+      max-width: 920px;
+      min-height: 80px;
+      font-family: $fontFour;
+      font-weight: 900;
+      margin: 0 auto;
+      padding-bottom: 2px;
+      color: $txtWhite;
+      border-bottom: 1px solid $txtWhite;
+      .accordion-ticket {
+        min-height: 80px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        @media (max-width: 1080px) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          margin-top: 25px;
+        }
+        .accordion-titleRight {
+          @extend %wh;
+          min-height: 80px;
+          grid-column: end;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media (max-width: 1080px) {
+            grid-column: 1;
+            grid-row: 3;
+          }
+          .ticket {
+            @extend %flexCenter;
+            border: 1px solid $txtWhite;
+            min-width: 100px;
+            max-width: 160px;
+            height: 42px;
+            padding: 6px 16px;
+            cursor: pointer;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+        input[type="checkbox"] {
+          display: none;
+        }
+        input[type="checkbox"]:checked ~ .content {
+          display: flex;
+        }
+        input[type="checkbox"]:checked
+          ~ label
+          .accordion-titleLeft
+          .arrowMoreInfo
+          .arrow {
+          rotate: 180deg;
+          display: inline-block;
+        }
+        input[type="checkbox"]:checked ~ label .accordion-titleLeft .date,
+        input[type="checkbox"]:checked ~ label .accordion-titleLeft .city {
+          display: none;
+        }
+        @media (max-width:1080px){
+          input[type="checkbox"]:checked ~ label .accordion-titleLeft .date {
+            display: block;
+          }
+          input[type="checkbox"]:checked ~ label .accordion-titleLeft .arrowMoreInfo .moreInfo{
+            display: none;
+          }
+          input[type="checkbox"]:checked ~ label .accordion-titleLeft .arrowMoreInfo .lessInfo{
+            display: block;
+          }
+        }
+        .accordion-title {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          grid-column: span 4;
+          @media (min-width: 1081px) {
+            &:hover {
+              .accordion-titleLeft {
+                .date,
+                .city {
+                  display: none;
+                }
+                .arrowMoreInfo {
+                  .arrow {
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+          .accordion-titleLeft {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            cursor: pointer;
+            .arrowMoreInfo {
+              .moreInfo,
+              .lessInfo,
+              .arrow {
+                display: none;
+              }
+            }
+            @media (max-width: 1080px) {
+              align-items: center;
+              .arrowMoreInfo {
+                margin-top: 25px;
+                display: flex;
+                gap: 5px;
+                .arrow {
+                  display: block;
+                }
+                .moreInfo {
+                  display: block;
+                }
+              }
+              .city {
+                display: none;
+              }
+            }
+          }
+        }
+        .content {
+          grid-column: span 4;
+          display: none;
+          flex-direction: column;
+          :nth-child(2) {
+            margin-bottom: 15px;
+          }
+          @media (max-width:1080px){
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    @extend %flexCenterColumn;
+    gap: 40px;
+    margin: 25px 0px 15px 0px;
+    color: $txtWhite;
+    overflow: hidden;
+    @media (max-width:430px) {
+      padding: 0px 20px;
+    }
+    .footerSocialMedia {
+      @extend %flexCenterColumn;
+      gap: 10px;
+      .socialMedia {
+        @extend %socialMedia;
+      }
+    }
+  }
+}

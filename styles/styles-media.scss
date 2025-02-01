@@ -1,0 +1,428 @@
+@import "./config.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  font-family: $fontThree;
+
+  header {
+    width: 100%;
+    height: 85px;
+    background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+
+    .contHeader {
+      width: 100%;
+      max-width: 75%;
+      margin: 0 auto;
+      @extend %flexBetween;
+
+      .navHeader {
+        @extend %flexCenter;
+        gap: 40px;
+        @media (max-width: 1080px) {
+          display: none;
+        }
+        .btnHeader {
+          opacity: 0.5;
+          cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: $txtWhite;
+          }
+
+          &:hover {
+            transition: 0.5s ease;
+            opacity: 1;
+          }
+        }
+
+        .active {
+          opacity: 1;
+        }
+      }
+
+      .socialMedia {
+        @extend %socialMedia;
+      }
+      .hamburgerMenu {
+        @extend %flexCenterColumn;
+        display: none;
+        gap: 7px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        .menuLines {
+          background-color: $txtWhite;
+          width: 22px;
+          height: 2px;
+        }
+        @media (max-width: 1080px) {
+          display: flex;
+        }
+      }
+      .logIn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $txtWhite;
+        cursor: pointer;
+
+        @media (max-width: 1080px) {
+          display: none;
+        }
+      }
+    }
+  }
+  main {
+    color: $txtWhite;
+    overflow: hidden;
+    font-family: $fontFour;
+    .mediaMainHeader {
+      @extend %wh, %flexCenterColumn;
+      font-family: $fontThree;
+      font-size: 50px;
+      color: $txtWhite;
+      margin: 150px 0px;
+      gap: 15px;
+      @media (max-width: 430px) {
+        img[alt="small line"] {
+          display: none;
+        }
+        .downTriangle {
+          animation: logoChange 2s 1 linear 0.2s;
+        }
+      }
+      .downTriangle {
+        cursor: pointer;
+        rotate: 180deg;
+      }
+    }
+    .mediaMusicSection {
+      @extend %maxWidth940, %wh;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 1080px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      @media (max-width:430px) {
+        padding: 0px 5px;
+      }
+      .mediaMusicSectionLeft {
+        display: flex;
+        flex-direction: column;
+        max-width: 440px;
+        gap: 50px;
+        .newAlbumHeader {
+          margin-top: 5px;
+          font-size: 23px;
+          h3 {
+            @media (max-width: 430px) {
+              animation: logoChange 2s 1 linear 0.2s;
+            }
+            font-size: 37px;
+            margin-top: 5px;
+          }
+        }
+        .newAlbumInfo {
+          font-family: $fontFour;
+          font-size: 15px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+      .mediaMusicSectionRight {
+        max-width: 440px;
+        .album {
+          .albumHeader {
+            @extend %flexBetween;
+            padding: 5px 10px;
+
+            .albumPrice,
+            .albumShare {
+              span {
+                color: $txtWhiteGray;
+                opacity: 0.7;
+                cursor: pointer;
+
+                &:hover {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          .albumCover {
+            img {
+              @extend %wh, %maxWidth900;
+              max-height: 330px;
+            }
+          }
+        }
+
+        .albumPlayer {
+          @extend %maxWidth900;
+          color: $txtWhite;
+          padding-top: 10px;
+          margin: 0 auto;
+
+          .playerHeader {
+            @extend %flexCenterColumn;
+            color: $txtWhite;
+            gap: 15px;
+          }
+
+          .player {
+            @extend %flexCenterColumn, %maxWidth900;
+
+            .playerTop {
+              @extend %flexCenter, %maxWidth900;
+              width: 100%;
+              font-size: 12px;
+              margin-top: 25px;
+              gap: 10px;
+
+              .timeLine {
+                height: 5px;
+                width: 100%;
+                background-color: $bgPlayer;
+                border-radius: 25px;
+                position: relative;
+
+                .passedTimeLine {
+                  border-radius: 25px;
+                  background-color: $txtWhite;
+                  height: 5px;
+                  width: 35%;
+                  position: absolute;
+                }
+              }
+            }
+
+            .playerControls {
+              @extend %flexCenter;
+              fill: $txtWhite;
+              margin-top: 25px;
+              gap: 15px;
+              .mediaBtnList,
+              .mediaBtnPrev,
+              .mediaBtnPlayPause,
+              .mediaBtnNext,
+              .mediaBtnShare {
+                display: none;
+              }
+              @media (max-width: 430px) {
+                .btnVolume,
+                .btnPrev,
+                .btnPlayPause,
+                .btnNext,
+                .btnMusicInfo {
+                  display: none;
+                }
+                .mediaBtnList,
+                .mediaBtnPrev,
+                .mediaBtnPlayPause,
+                .mediaBtnNext,
+                .mediaBtnShare {
+                  display: block;
+                }
+              }
+              * {
+                opacity: 0.9;
+                cursor: pointer;
+                &:hover {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          .playList {
+            @extend %flexCenterColumn, %maxWidth900;
+            width: 100%;
+            margin-top: 25px;
+
+            .music {
+              @extend %flexBetween, %forPlayList;
+              width: inherit;
+              cursor: pointer;
+              padding: 15px 0px;
+              border-top: 2px solid $clrGray;
+            }
+          }
+        }
+      }
+    }
+    .musicSectionTop {
+      @extend %flexCenter, %wh, %margingTB100;
+      position: relative;
+      @media (max-width: 430px) {
+        .bigLine {
+          display: none;
+        }
+      }
+
+      .upTriangle {
+        cursor: pointer;
+        position: absolute;
+        top: -47px;
+      }
+    }
+    .videoSection {
+      @extend %maxWidth940;
+      display: flex;
+      gap: 25px;
+      flex-direction: column;
+      margin: 0 auto;
+      .lateMusic {
+        text-align: center;
+      }
+      .videos {
+        @extend %flexBetween;
+        gap: 40px;
+        margin: 0 auto;
+        @media (max-width: 1080px) {
+          flex-direction: column;
+        }
+        @media (max-width:430px) {
+          iframe{
+            max-width: 430px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .musicSectionBottom {
+      @extend %flexCenter, %wh, %margingTB100;
+      position: relative;
+      @media (max-width: 430px) {
+        .bigLine {
+          display: none;
+        }
+      }
+      .downTriangle {
+        cursor: pointer;
+        position: absolute;
+        top: -27px;
+        rotate: 180deg;
+      }
+    }
+    .gallerySection {
+      @extend %flexCenterColumn;
+      gap: 25px;
+      @media (max-width:430px) {
+        padding: 0px 5px;
+      }
+      span {
+        font-size: 23px;
+      }
+      .gallery {
+        max-width: 900px;
+        width: 100%;
+        .galleryPicture {
+          position: relative;
+          .fa-angle-left {
+            @extend %btnGallery;
+            left: 15px;
+          }
+          .fa-angle-right {
+            @extend %btnGallery;
+            right: 15px;
+          }
+          .picture {
+            width: 100%;
+            transition: filter 0.8s linear;
+            position: relative;
+            .pictureInfo {
+              @extend %flexBetweenColumn1;
+              position: absolute;
+              top: 15%;
+              height: 80%;
+              max-width: 900px;
+              width: 100%;
+              opacity: 0;
+              &:hover {
+                opacity: 1;
+              }
+              .galleryPictureTitle {
+                @extend %flexCenterColumn;
+                height: 100%;
+                user-select: none;
+                h3 {
+                  margin-bottom: 25px;
+                }
+                span {
+                  font-size: 15px;
+                  max-width: 600px;
+                }
+              }
+              .pictureInfoLS {
+                display: flex;
+                justify-content: center;
+                gap: 50px;
+                .heartL,
+                .shareS {
+                  cursor: pointer;
+                  opacity: 0.7;
+                  &:hover {
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+            img[alt="guitar"] {
+              opacity: 0.8;
+              width: 100%;
+              max-width: 892px;
+              height: 100%;
+            }
+            &:hover {
+              filter: grayscale(100%);
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    @extend %flexCenterColumn;
+    font-family: $fontFour;
+    gap: 40px;
+    margin: 25px 0px 15px 0px;
+    color: $txtWhite;
+    overflow: hidden;
+    @media (max-width:430px) {
+      padding: 0px 20px;
+    }
+    .upTriangle {
+      @media (max-width: 430px) {
+        img[alt="up Triangle"] {
+          animation: logoChange 2s 1 linear 0.2s;
+        }
+      }
+      cursor: pointer;
+    }
+    .footerSocialMedia {
+      @extend %flexCenterColumn;
+      gap: 10px;
+
+      .socialMedia {
+        @extend %socialMedia;
+      }
+    }
+  }
+}

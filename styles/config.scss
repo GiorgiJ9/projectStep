@@ -1,0 +1,248 @@
+// Fonts ! ! !
+@font-face {
+  font-family: "Museo Slab 500";
+  src: url("../fonts/fontOne/MuseoSlab-500.eot");
+  src: url("../fonts/fontOne/MuseoSlab-500.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/fontOne/MuseoSlab-500.woff2") format("woff2"),
+    url("../fonts/fontOne/MuseoSlab-500.woff") format("woff"),
+    url("../fonts/fontOne/MuseoSlab-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Niconne";
+  src: url("../fonts/fontTwo/Niconne-Regular.eot");
+  src: url("../fonts/fontTwo/Niconne-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/fontTwo/Niconne-Regular.woff2") format("woff2"),
+    url("../fonts/fontTwo/Niconne-Regular.woff") format("woff"),
+    url("../fonts/fontTwo/Niconne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot");
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/fontThree/NimbusSanL-Reg.woff2") format("woff2"),
+    url("../fonts/fontThree/NimbusSanL-Reg.woff") format("woff"),
+    url("../fonts/fontThree/NimbusSanL-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/fontFour/Raleway-Thin.woff2') format('woff2'),
+      url('Raleway-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+// Animations ! ! !
+@keyframes logoChange {
+  0% {
+    opacity: 0.3;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// Variables ! ! !
+$fontOne: "Museo Slab 500";
+$fontTwo: "Niconne";
+$fontThree: "Nimbus Sans L";
+$fontFour: "Raleway";
+$txtWhite: #ffffff;
+$txtWhiteGray: #ffffff66;
+$txtBlack: #000000;
+$txtHoverOne: #82a028;
+$txtHoverTwo: #def599;
+$txtRed: #dc143c;
+$bgPlayer: #ffffff33;
+$clrGray: #605e5e;
+$bgBlack: #2f2e2ea8;
+$btnBg: #2f2e2e;
+$btnSubmitClr: #a0a09f;
+
+// Global Classes ! ! !
+%flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+%flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flexBetweenColumn1 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+%flexAround {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+%socialMedia {
+  @extend %flexCenter;
+  gap: 10px;
+
+  img {
+    width: 24px;
+  }
+
+  .btnSocial {
+    cursor: pointer;
+  }
+}
+
+%wh {
+  width: 100%;
+  height: 100%;
+}
+
+%maxWidth940 {
+  max-width: 940px;
+}
+
+%maxWidth900 {
+  max-width: 900px;
+}
+
+%maxWidth480 {
+  max-width: 480px;
+}
+
+%margingTB100 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+%lineTriangle {
+  position: absolute;
+  cursor: pointer;
+  margin: auto;
+  right: 0;
+  left: 0;
+}
+
+%forPlayList {
+  .numberName,
+  .musicLength {
+    @extend %flexCenter;
+    gap: 15px;
+
+    .time {
+      padding: 8px 12px;
+    }
+
+    .fa-share-nodes {
+      color: $clrGray;
+    }
+
+    i {
+      display: none;
+    }
+
+    .priceTag {
+      color: $txtBlack;
+      background-color: $bgPlayer;
+      padding: 8px 12px;
+      display: none;
+
+      span {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &:hover {
+    .numberName,
+    .musicLength {
+      i {
+        display: block;
+      }
+
+      .time {
+        display: none;
+      }
+
+      .orderNumber {
+        display: none;
+      }
+
+      .priceTag {
+        display: block;
+      }
+    }
+  }
+}
+
+%emailInput {
+  background-color: $bgBlack;
+  color: $txtWhite;
+  outline: none;
+  padding: 0px 5px;
+  height: 40px;
+}
+// BUTTONS ! ! !
+
+%btnGallery {
+  position: absolute;
+  cursor: pointer;
+  font-size: 40px;
+  top: 50%;
+  opacity: 0.6;
+  z-index: 99;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+%btnDownload {
+  background-color: $btnBg;
+  max-width: 254px;
+  max-height: 52px;
+  position: absolute;
+  cursor: pointer;
+  left: 5%;
+  top: 75%;
+  z-index: 9;
+  transition: 0.3s linear;
+  &:hover {
+    color: $txtBlack;
+    background-color: $txtWhite;
+  }
+}
+%btnBio {
+  background-color: $btnBg;
+  text-align: center;
+  color: $txtWhite;
+  height: 52px;
+  max-width: 254px;
+  text-decoration: none;
+  line-height: 52px;
+  border: $txtWhite 1px solid;
+  transition: 0.3s linear;
+  &:hover {
+    background-color: $txtWhite;
+    color: $txtBlack;
+  }
+}

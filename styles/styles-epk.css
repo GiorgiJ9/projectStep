@@ -1,0 +1,747 @@
+@font-face {
+  font-family: "Museo Slab 500";
+  src: url("../fonts/fontOne/MuseoSlab-500.eot");
+  src: url("../fonts/fontOne/MuseoSlab-500.eot?#iefix") format("embedded-opentype"), url("../fonts/fontOne/MuseoSlab-500.woff2") format("woff2"), url("../fonts/fontOne/MuseoSlab-500.woff") format("woff"), url("../fonts/fontOne/MuseoSlab-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Niconne";
+  src: url("../fonts/fontTwo/Niconne-Regular.eot");
+  src: url("../fonts/fontTwo/Niconne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/fontTwo/Niconne-Regular.woff2") format("woff2"), url("../fonts/fontTwo/Niconne-Regular.woff") format("woff"), url("../fonts/fontTwo/Niconne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot");
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot?#iefix") format("embedded-opentype"), url("../fonts/fontThree/NimbusSanL-Reg.woff2") format("woff2"), url("../fonts/fontThree/NimbusSanL-Reg.woff") format("woff"), url("../fonts/fontThree/NimbusSanL-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/fontFour/Raleway-Thin.woff2") format("woff2"), url("Raleway-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@keyframes logoChange {
+  0% {
+    opacity: 0.3;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls, body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerTop, body main .epkMainGallerySection .btnDownload, body header .contHeader .navHeader, body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .numberName,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .musicLength, body footer .footerSocialMedia .socialMedia, body header .contHeader .socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body footer .footerSocialMedia, body footer, body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList, body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player, body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playerHeader, body main .epkMainGallerySection .picture .pictureInfo .galleryPictureTitle, body main .epkMainHeaderSection, body header .contHeader .hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main .tourSection .tourNav, body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music, body main .epkBio-Player .mediaMusicSectionRight .album .albumHeader, body header .contHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body main .epkMainGallerySection .picture .pictureInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+body main .epkMainGallerySection {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+body footer .footerSocialMedia .socialMedia, body header .contHeader .socialMedia {
+  gap: 10px;
+}
+body footer .footerSocialMedia .socialMedia img, body header .contHeader .socialMedia img {
+  width: 24px;
+}
+body footer .footerSocialMedia .socialMedia .btnSocial, body header .contHeader .socialMedia .btnSocial {
+  cursor: pointer;
+}
+
+body main .filesSection .filesSectionRight, body main .filesSection .filesSectionLeft .riderList .fslBtn, body main .filesSection .filesSectionLeft, body main .filesSection, body main .epkVideoSection .video, body main .epkBio-Player .mediaMusicSectionRight .album .albumCover img, body main .epkBio-Player, body main .epkMainGallerySection .btnDownload a, body main .epkMainGallerySection .btnDownload, body main .epkMainGallerySection, body main .epkMainHeaderSection {
+  width: 100%;
+  height: 100%;
+}
+
+body main .filesSection, body main .tourSection, body main .epkVideoSection, body main .epkBio-Player, body main .epkMainGallerySection {
+  max-width: 940px;
+}
+
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList, body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerTop, body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player, body main .epkBio-Player .mediaMusicSectionRight .albumPlayer, body main .epkBio-Player .mediaMusicSectionRight .album .albumCover img {
+  max-width: 900px;
+}
+
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .numberName,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .musicLength {
+  gap: 15px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .numberName .time,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .musicLength .time {
+  padding: 8px 12px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .numberName .fa-share-nodes,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .musicLength .fa-share-nodes {
+  color: #605e5e;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .numberName i,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .musicLength i {
+  display: none;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .numberName .priceTag,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .musicLength .priceTag {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  display: none;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .numberName .priceTag span,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .musicLength .priceTag span {
+  opacity: 0.6;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music:hover .numberName i,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music:hover .musicLength i {
+  display: block;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music:hover .numberName .time,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music:hover .musicLength .time {
+  display: none;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music:hover .numberName .orderNumber,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music:hover .musicLength .orderNumber {
+  display: none;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music:hover .numberName .priceTag,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music:hover .musicLength .priceTag {
+  display: block;
+}
+
+body main .epkMainGallerySection .btnDownload {
+  background-color: #2f2e2e;
+  max-width: 254px;
+  max-height: 52px;
+  position: absolute;
+  cursor: pointer;
+  left: 5%;
+  top: 75%;
+  z-index: 9;
+  transition: 0.3s linear;
+}
+body main .epkMainGallerySection .btnDownload:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+body main .epkBio-Player .epkBioSection .bioDwonloads .btnBio {
+  background-color: #2f2e2e;
+  text-align: center;
+  color: #ffffff;
+  height: 52px;
+  max-width: 254px;
+  text-decoration: none;
+  line-height: 52px;
+  border: #ffffff 1px solid;
+  transition: 0.3s linear;
+}
+body main .epkBio-Player .epkBioSection .bioDwonloads .btnBio:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  font-family: "Nimbus Sans L";
+}
+body header {
+  width: 100%;
+  height: 85px;
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+body header .contHeader {
+  width: 100%;
+  max-width: 75%;
+  margin: 0 auto;
+}
+body header .contHeader .navHeader {
+  gap: 40px;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .navHeader {
+    display: none;
+  }
+}
+body header .contHeader .navHeader .btnHeader {
+  opacity: 0.5;
+  cursor: pointer;
+}
+body header .contHeader .navHeader .btnHeader a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body header .contHeader .navHeader .btnHeader:hover {
+  transition: 0.5s ease;
+  opacity: 1;
+}
+body header .contHeader .navHeader .active {
+  opacity: 1;
+}
+body header .contHeader .hamburgerMenu {
+  display: none;
+  gap: 7px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+body header .contHeader .hamburgerMenu .menuLines {
+  background-color: #ffffff;
+  width: 22px;
+  height: 2px;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .hamburgerMenu {
+    display: flex;
+  }
+}
+body header .contHeader .logIn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .logIn {
+    display: none;
+  }
+}
+body main {
+  overflow: hidden;
+  color: #ffffff;
+  font-family: "Raleway";
+}
+@media (max-width: 430px) {
+  body main {
+    padding: 0px 5px;
+  }
+}
+body main .epkMainHeaderSection {
+  font-size: 50px;
+  color: #ffffff;
+  margin: 150px 0px;
+  gap: 15px;
+  font-family: "Nimbus Sans L";
+}
+body main .epkMainHeaderSection .downTriangle {
+  cursor: pointer;
+  rotate: 180deg;
+}
+body main .epkMainGallerySection {
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  gap: 25px;
+  overflow: hidden;
+}
+@media (max-width: 1080px) {
+  body main .epkMainGallerySection {
+    max-width: 480px;
+  }
+  body main .epkMainGallerySection .leftSlider,
+  body main .epkMainGallerySection .rightSlider {
+    display: none;
+  }
+}
+body main .epkMainGallerySection .leftSlider,
+body main .epkMainGallerySection .rightSlider {
+  filter: drop-shadow(1px 1px #ffffff) drop-shadow(1px -1px #ffffff);
+  cursor: pointer;
+  opacity: 0.5;
+}
+body main .epkMainGallerySection .leftSlider:hover,
+body main .epkMainGallerySection .rightSlider:hover {
+  opacity: 1;
+}
+body main .epkMainGallerySection .btnDownload a {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 0px;
+}
+body main .epkMainGallerySection .btnDownload a:hover {
+  color: #000000;
+}
+@media (max-width: 1080px) {
+  body main .epkMainGallerySection .btnDownload {
+    transform: translateX(25%);
+  }
+}
+body main .epkMainGallerySection .picture img {
+  max-height: 330px;
+  max-width: 540px;
+  width: 100%;
+  height: 100%;
+}
+body main .epkMainGallerySection .picture .pictureInfo {
+  position: absolute;
+  transform: translateX(25%);
+  top: 15%;
+  height: 80%;
+  max-width: 330px;
+  width: 100%;
+  opacity: 0;
+}
+body main .epkMainGallerySection .picture .pictureInfo:hover {
+  opacity: 1;
+}
+body main .epkMainGallerySection .picture .pictureInfo .galleryPictureTitle {
+  height: 100%;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body main .epkMainGallerySection .picture .pictureInfo .galleryPictureTitle h3 {
+  margin-bottom: 25px;
+}
+body main .epkMainGallerySection .picture .pictureInfo .galleryPictureTitle span {
+  font-size: 15px;
+  max-width: 330px;
+}
+body main .epkMainGallerySection .picture .pictureInfo .pictureInfoLS {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+body main .epkMainGallerySection .picture .pictureInfo .pictureInfoLS .heartL,
+body main .epkMainGallerySection .picture .pictureInfo .pictureInfoLS .shareS {
+  cursor: pointer;
+  opacity: 0.7;
+}
+body main .epkMainGallerySection .picture .pictureInfo .pictureInfoLS .heartL:hover,
+body main .epkMainGallerySection .picture .pictureInfo .pictureInfoLS .shareS:hover {
+  opacity: 1;
+}
+body main .epkMainGallerySection .picture:hover {
+  filter: grayscale(100%);
+  transition: 0.8s ease-in-out;
+}
+body main .epkBio-Player {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+@media (max-width: 1080px) {
+  body main .epkBio-Player {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    max-width: 480px;
+    gap: 50px;
+  }
+}
+body main .epkBio-Player .epkBioSection {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 286px;
+}
+body main .epkBio-Player .epkBioSection .bioTop h3 {
+  padding: 7px;
+  font-size: 23px;
+}
+body main .epkBio-Player .epkBioSection .bioAbout {
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body main .epkBio-Player .epkBioSection .shorBio {
+  padding: 7px;
+}
+body main .epkBio-Player .epkBioSection .shorBio h3 {
+  font-size: 20px;
+  line-height: 3;
+}
+body main .epkBio-Player .epkBioSection .shorBio span {
+  font-size: 15px;
+}
+body main .epkBio-Player .epkBioSection .bioDwonloads {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+body main .epkBio-Player .mediaMusicSectionRight {
+  max-width: 440px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .musicTop h3 {
+  padding: 7px;
+  font-size: 23px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .musicTop span {
+  font-size: 15px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .album .albumHeader {
+  padding: 5px 10px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .album .albumHeader .albumPrice span,
+body main .epkBio-Player .mediaMusicSectionRight .album .albumHeader .albumShare span {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0.7;
+  cursor: pointer;
+}
+body main .epkBio-Player .mediaMusicSectionRight .album .albumHeader .albumPrice span:hover,
+body main .epkBio-Player .mediaMusicSectionRight .album .albumHeader .albumShare span:hover {
+  opacity: 1;
+}
+body main .epkBio-Player .mediaMusicSectionRight .album .albumCover img {
+  max-height: 330px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer {
+  color: #ffffff;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playerHeader {
+  color: #ffffff;
+  gap: 15px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerTop {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 25px;
+  gap: 10px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerTop .timeLine {
+  height: 5px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  position: relative;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerTop .timeLine .passedTimeLine {
+  border-radius: 25px;
+  background-color: #ffffff;
+  height: 5px;
+  width: 35%;
+  position: absolute;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls {
+  fill: #ffffff;
+  margin-top: 25px;
+  gap: 15px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnList,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnPrev,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnPlayPause,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnNext,
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnShare {
+  display: none;
+}
+@media (max-width: 430px) {
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .btnVolume,
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .btnPrev,
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .btnPlayPause,
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .btnNext,
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .btnMusicInfo {
+    display: none;
+  }
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnList,
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnPrev,
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnPlayPause,
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnNext,
+  body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls .mediaBtnShare {
+    display: block;
+  }
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls * {
+  opacity: 0.9;
+  cursor: pointer;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .player .playerControls *:hover {
+  opacity: 1;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList {
+  width: 100%;
+  margin-top: 25px;
+}
+body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music {
+  width: inherit;
+  cursor: pointer;
+  padding: 15px 0px;
+  border-top: 2px solid #605e5e;
+}
+body main .epkVideoSection {
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media (max-width: 1080px) {
+  body main .epkVideoSection {
+    max-width: 480px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+}
+body main .epkVideoSection .videoTop h3 {
+  padding: 7px;
+  font-size: 23px;
+}
+@media (max-width: 1080px) {
+  body main .epkVideoSection .video iframe {
+    max-width: 480px;
+    max-height: 350px;
+    width: 100%;
+  }
+}
+body main .tourSection {
+  margin: 0 auto;
+}
+@media (max-width: 1080px) {
+  body main .tourSection {
+    max-width: 480px;
+  }
+  body main .tourSection .tourNav {
+    flex-direction: column;
+  }
+  body main .tourSection .tourNav .lineForTourNav {
+    display: inline;
+    margin: 5px 0px;
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff;
+  }
+}
+body main .tourSection .tourTop h3 {
+  padding: 7px;
+  font-size: 23px;
+}
+body main .tourSection .tourNav {
+  margin-top: 25px;
+  border-top: 1px solid #ffffff;
+  padding: 7px;
+}
+body main .tourSection .tourNav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+body main .tourSection .tourNav ul :first-child {
+  cursor: pointer;
+}
+body main .tourSection .tourNav ul :last-child {
+  opacity: 0.6;
+  cursor: pointer;
+}
+body main .tourSection .tourNav ul :last-child:hover {
+  opacity: 1;
+}
+body main .tourSection .tourNav .lineForTourTop {
+  display: none;
+}
+body main .tourSection .tourNav .followArtist {
+  display: flex;
+  gap: 15px;
+}
+body main .tourSection .tourNav .followArtist a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(47, 46, 46, 0.6588235294);
+  padding: 5px 10px;
+}
+body main .tourSection .tourNav .followArtist a:hover {
+  transition: 0.3s linear;
+  background-color: #ffffff;
+  color: #000000;
+}
+body main .tourSection .tourContainer {
+  max-height: 400px;
+  overflow: hidden;
+}
+body main .tourSection .tourContainer::-webkit-scrollbar {
+  width: 10px;
+}
+body main .tourSection .tourContainer::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+body main .tourSection .tourContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+body main .tourSection .tourContainer::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+body main .tourSection .tourContainer .tourInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  border-top: 1px solid #ffffff;
+  padding: 40px 30px;
+}
+@media (max-width: 1080px) {
+  body main .tourSection .tourContainer .tourInfo {
+    flex-direction: column;
+  }
+}
+body main .tourSection .tourContainer .tourInfo .info {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+@media (max-width: 1080px) {
+  body main .tourSection .tourContainer .tourInfo .info {
+    padding: 15px;
+    gap: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+body main .tourSection .tourContainer .tourInfo .info .date {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+body main .tourSection .tourContainer .tourInfo .info .date :first-child {
+  font-size: 40px;
+}
+body main .tourSection .tourContainer .tourInfo .info .tour {
+  display: flex;
+  gap: 50px;
+}
+body main .tourSection .tourContainer .tourInfo .info .tour .hideLine {
+  display: none;
+}
+@media (max-width: 1080px) {
+  body main .tourSection .tourContainer .tourInfo .info .tour {
+    gap: 10px;
+  }
+  body main .tourSection .tourContainer .tourInfo .info .tour .hideLine {
+    display: inline-block;
+  }
+}
+body main .tourSection .tourContainer .tourInfo .notify {
+  border: 1px solid #ffffff;
+  width: 254px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 0px;
+  transition: 0.4s linear;
+}
+body main .tourSection .tourContainer .tourInfo .notify:hover {
+  background-color: #ffffff;
+  color: rgba(47, 46, 46, 0.6588235294);
+}
+body main .tourSection .tourContainer:hover {
+  overflow-y: scroll;
+}
+body main .filesSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+@media (max-width: 1080px) {
+  body main .filesSection {
+    flex-direction: column;
+    max-width: 480px;
+    gap: 50px;
+  }
+}
+body main .filesSection .filesSectionLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+body main .filesSection .filesSectionLeft .fslTop {
+  margin-bottom: 10px;
+}
+body main .filesSection .filesSectionLeft .fslTop h3 {
+  padding: 7px;
+  font-size: 23px;
+}
+body main .filesSection .filesSectionLeft .riderList {
+  display: flex;
+  gap: 15px;
+}
+body main .filesSection .filesSectionLeft .riderList .fslBtn {
+  transition: 0.5s linear;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  max-width: 136px;
+  line-height: 46px;
+  border: 1px solid #ffffff;
+  background-color: #2f2e2e;
+}
+body main .filesSection .filesSectionLeft .riderList .fslBtn:hover {
+  background-color: #ffffff;
+  color: rgba(47, 46, 46, 0.6588235294);
+}
+body main .filesSection .filesSectionLeft .riderList span {
+  line-height: 46px;
+}
+body main .filesSection .filesSectionRight {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+body main .filesSection .filesSectionRight .fsrTop {
+  margin-bottom: 10px;
+}
+body main .filesSection .filesSectionRight .fsrTop h3 {
+  padding: 7px;
+  font-size: 23px;
+}
+body footer {
+  gap: 40px;
+  margin: 25px 0px 15px 0px;
+  color: #ffffff;
+  overflow: hidden;
+}
+@media (max-width: 430px) {
+  body footer {
+    padding: 0px 20px;
+  }
+}
+body footer .upTriangle {
+  cursor: pointer;
+}
+body footer .footerSocialMedia {
+  gap: 10px;
+}/*# sourceMappingURL=styles-epk.css.map */

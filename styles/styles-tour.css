@@ -1,0 +1,318 @@
+@font-face {
+  font-family: "Museo Slab 500";
+  src: url("../fonts/fontOne/MuseoSlab-500.eot");
+  src: url("../fonts/fontOne/MuseoSlab-500.eot?#iefix") format("embedded-opentype"), url("../fonts/fontOne/MuseoSlab-500.woff2") format("woff2"), url("../fonts/fontOne/MuseoSlab-500.woff") format("woff"), url("../fonts/fontOne/MuseoSlab-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Niconne";
+  src: url("../fonts/fontTwo/Niconne-Regular.eot");
+  src: url("../fonts/fontTwo/Niconne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/fontTwo/Niconne-Regular.woff2") format("woff2"), url("../fonts/fontTwo/Niconne-Regular.woff") format("woff"), url("../fonts/fontTwo/Niconne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot");
+  src: url("../fonts/fontThree/NimbusSanL-Reg.eot?#iefix") format("embedded-opentype"), url("../fonts/fontThree/NimbusSanL-Reg.woff2") format("woff2"), url("../fonts/fontThree/NimbusSanL-Reg.woff") format("woff"), url("../fonts/fontThree/NimbusSanL-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/fontFour/Raleway-Thin.woff2") format("woff2"), url("Raleway-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@keyframes logoChange {
+  0% {
+    opacity: 0.3;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body main .accordion .accordion-ticket .accordion-titleRight .ticket, body header .contHeader .navHeader, body footer .footerSocialMedia .socialMedia, body header .contHeader .socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body footer .footerSocialMedia, body footer, body main .tourMainHeader, body main, body header .contHeader .hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body header .contHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body footer .footerSocialMedia .socialMedia, body header .contHeader .socialMedia {
+  gap: 10px;
+}
+body footer .footerSocialMedia .socialMedia img, body header .contHeader .socialMedia img {
+  width: 24px;
+}
+body footer .footerSocialMedia .socialMedia .btnSocial, body header .contHeader .socialMedia .btnSocial {
+  cursor: pointer;
+}
+
+body main .accordion .accordion-ticket .accordion-titleRight, body main .accordion, body main .tourMainHeader, body main {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  font-family: "Nimbus Sans L";
+}
+body header {
+  width: 100%;
+  height: 85px;
+  background-image: url(https://static.wixstatic.com/media/05e3dc_9a652459a41748d1bba89f5918d38055.jpg/v1/fill/w_1920,h_560,al_c,q_85,enc_auto/05e3dc_9a652459a41748d1bba89f5918d38055.jpg);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+body header .contHeader {
+  width: 100%;
+  max-width: 75%;
+  margin: 0 auto;
+}
+body header .contHeader .navHeader {
+  gap: 40px;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .navHeader {
+    display: none;
+  }
+}
+body header .contHeader .navHeader .btnHeader {
+  opacity: 0.5;
+  cursor: pointer;
+}
+body header .contHeader .navHeader .btnHeader a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body header .contHeader .navHeader .btnHeader:hover {
+  transition: 0.5s ease;
+  opacity: 1;
+}
+body header .contHeader .navHeader .active {
+  opacity: 1;
+}
+body header .contHeader .hamburgerMenu {
+  display: none;
+  gap: 7px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+body header .contHeader .hamburgerMenu .menuLines {
+  background-color: #ffffff;
+  width: 22px;
+  height: 2px;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .hamburgerMenu {
+    display: flex;
+  }
+}
+body header .contHeader .logIn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  body header .contHeader .logIn {
+    display: none;
+  }
+}
+body main {
+  overflow: hidden;
+}
+body main .tourMainHeader {
+  font-size: 50px;
+  color: #ffffff;
+  margin: 150px 0px 50px 0px;
+  gap: 15px;
+}
+@media (max-width: 430px) {
+  body main .tourMainHeader img[alt="small line"] {
+    display: none;
+  }
+  body main .tourMainHeader .downTriangle {
+    animation: logoChange 2s 1 linear 0.2s;
+  }
+}
+body main .tourMainHeader .downTriangle {
+  cursor: pointer;
+  rotate: 180deg;
+}
+body main .accordion {
+  max-width: 920px;
+  min-height: 80px;
+  font-family: "Raleway";
+  font-weight: 900;
+  margin: 0 auto;
+  padding-bottom: 2px;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+body main .accordion .accordion-ticket {
+  min-height: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media (max-width: 1080px) {
+  body main .accordion .accordion-ticket {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 25px;
+  }
+}
+body main .accordion .accordion-ticket .accordion-titleRight {
+  min-height: 80px;
+  grid-column: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1080px) {
+  body main .accordion .accordion-ticket .accordion-titleRight {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+body main .accordion .accordion-ticket .accordion-titleRight .ticket {
+  border: 1px solid #ffffff;
+  min-width: 100px;
+  max-width: 160px;
+  height: 42px;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+body main .accordion .accordion-ticket .accordion-titleRight .ticket:hover {
+  opacity: 0.7;
+}
+body main .accordion .accordion-ticket input[type=checkbox] {
+  display: none;
+}
+body main .accordion .accordion-ticket input[type=checkbox]:checked ~ .content {
+  display: flex;
+}
+body main .accordion .accordion-ticket input[type=checkbox]:checked ~ label .accordion-titleLeft .arrowMoreInfo .arrow {
+  rotate: 180deg;
+  display: inline-block;
+}
+body main .accordion .accordion-ticket input[type=checkbox]:checked ~ label .accordion-titleLeft .date,
+body main .accordion .accordion-ticket input[type=checkbox]:checked ~ label .accordion-titleLeft .city {
+  display: none;
+}
+@media (max-width: 1080px) {
+  body main .accordion .accordion-ticket input[type=checkbox]:checked ~ label .accordion-titleLeft .date {
+    display: block;
+  }
+  body main .accordion .accordion-ticket input[type=checkbox]:checked ~ label .accordion-titleLeft .arrowMoreInfo .moreInfo {
+    display: none;
+  }
+  body main .accordion .accordion-ticket input[type=checkbox]:checked ~ label .accordion-titleLeft .arrowMoreInfo .lessInfo {
+    display: block;
+  }
+}
+body main .accordion .accordion-ticket .accordion-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: span 4;
+}
+@media (min-width: 1081px) {
+  body main .accordion .accordion-ticket .accordion-title:hover .accordion-titleLeft .date,
+  body main .accordion .accordion-ticket .accordion-title:hover .accordion-titleLeft .city {
+    display: none;
+  }
+  body main .accordion .accordion-ticket .accordion-title:hover .accordion-titleLeft .arrowMoreInfo .arrow {
+    display: inline-block;
+  }
+}
+body main .accordion .accordion-ticket .accordion-title .accordion-titleLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  cursor: pointer;
+}
+body main .accordion .accordion-ticket .accordion-title .accordion-titleLeft .arrowMoreInfo .moreInfo,
+body main .accordion .accordion-ticket .accordion-title .accordion-titleLeft .arrowMoreInfo .lessInfo,
+body main .accordion .accordion-ticket .accordion-title .accordion-titleLeft .arrowMoreInfo .arrow {
+  display: none;
+}
+@media (max-width: 1080px) {
+  body main .accordion .accordion-ticket .accordion-title .accordion-titleLeft {
+    align-items: center;
+  }
+  body main .accordion .accordion-ticket .accordion-title .accordion-titleLeft .arrowMoreInfo {
+    margin-top: 25px;
+    display: flex;
+    gap: 5px;
+  }
+  body main .accordion .accordion-ticket .accordion-title .accordion-titleLeft .arrowMoreInfo .arrow {
+    display: block;
+  }
+  body main .accordion .accordion-ticket .accordion-title .accordion-titleLeft .arrowMoreInfo .moreInfo {
+    display: block;
+  }
+  body main .accordion .accordion-ticket .accordion-title .accordion-titleLeft .city {
+    display: none;
+  }
+}
+body main .accordion .accordion-ticket .content {
+  grid-column: span 4;
+  display: none;
+  flex-direction: column;
+}
+body main .accordion .accordion-ticket .content :nth-child(2) {
+  margin-bottom: 15px;
+}
+@media (max-width: 1080px) {
+  body main .accordion .accordion-ticket .content {
+    text-align: center;
+  }
+}
+body footer {
+  gap: 40px;
+  margin: 25px 0px 15px 0px;
+  color: #ffffff;
+  overflow: hidden;
+}
+@media (max-width: 430px) {
+  body footer {
+    padding: 0px 20px;
+  }
+}
+body footer .footerSocialMedia {
+  gap: 10px;
+}/*# sourceMappingURL=styles-tour.css.map */
