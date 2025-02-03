@@ -116,7 +116,7 @@ body main .musicSection .albumPlayer .playList .music .musicLength i {
 }
 body main .musicSection .albumPlayer .playList .music .numberName .priceTag,
 body main .musicSection .albumPlayer .playList .music .musicLength .priceTag {
-  color: #000000;
+  color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 8px 12px;
   display: none;
@@ -624,8 +624,7 @@ body main .subscribeSection .subscribeEmail form button:hover {
 }
 body footer {
   gap: 40px;
-  margin-bottom: 25px;
-  margin-top: 15px;
+  margin: 25px 0px 15px 0px;
   color: #ffffff;
   overflow: hidden;
 }

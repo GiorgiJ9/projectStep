@@ -111,7 +111,7 @@ body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .
 }
 body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .numberName .priceTag,
 body main .epkBio-Player .mediaMusicSectionRight .albumPlayer .playList .music .musicLength .priceTag {
-  color: #000000;
+  color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 8px 12px;
   display: none;
