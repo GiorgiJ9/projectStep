@@ -537,12 +537,14 @@ body main .tourSection {
   }
   body main .tourSection .tourNav {
     flex-direction: column;
+    gap: 5px;
   }
   body main .tourSection .tourNav .lineForTourNav {
-    display: inline;
+    display: block;
     margin: 5px 0px;
     height: 1px;
     width: 100%;
+    max-width: 480px;
     background-color: #ffffff;
   }
 }
